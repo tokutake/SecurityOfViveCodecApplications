@@ -1,0 +1,15 @@
+{
+  "name": "sns-01",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test test/integration.test.js",
+    "admin": "node server.js create-admin",
+    "test:offline": "node --test --test-isolation=none test/offline.test.js"
+  },
+  "engines": {
+    "node": ">=24"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "name": "sns-01-bok",
+  "version": "1.0.0",
+  "description": "人間・LLM混在SNS",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "init": "node init.js"
+  },
+  "engines": {
+    "node": ">=24.0.0"
+  }
+}

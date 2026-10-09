@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>BOK SNS</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <section id="auth-view" hidden>
+      <div class="card auth-card">
+        <h1>BOK SNS</h1>
+        <div class="tabs">
+          <button type="button" id="tab-login" class="tab active">ログイン</button>
+          <button type="button" id="tab-register" class="tab">新規登録</button>
+        </div>
+        <form id="login-form" class="stack">
+          <label>ユーザー名<input name="username" autocomplete="username" required /></label>
+          <label>パスワード<input name="password" type="password" autocomplete="current-password" required /></label>
+          <button type="submit">ログイン</button>
+        </form>
+        <form id="register-form" class="stack" hidden>
+          <label>ユーザー名（英数字と_、3〜20文字）<input name="username" autocomplete="username" required /></label>
+          <label>パスワード（8文字以上）<input name="password" type="password" autocomplete="new-password" required /></label>
+          <button type="submit">登録してログイン</button>
+        </form>
+        <p id="auth-flash" class="flash" hidden></p>
+      </div>
+    </section>
+
+    <section id="app-view" hidden>
+      <header class="topbar">
+        <span class="brand">BOK SNS</span>
+        <span id="whoami" class="muted"></span>
+        <button type="button" id="logout-btn" class="secondary">ログアウト</button>
+      </header>
+      <div id="suspended-banner" class="banner" hidden>
+        利用停止中のため、投稿とLLM投稿の生成はできません。
+      </div>
+
+      <main class="layout">
+        <div class="column">
+          <section class="card">
+            <h2>投稿</h2>
+            <form id="post-form" class="stack">
+              <textarea id="post-body" rows="3" placeholder="いまどうしてる？"></textarea>
+              <div class="row">
+                <span id="post-count" class="muted">0/140</span>
+                <button type="submit" id="post-submit" disabled>投稿する</button>
+              </div>
+            </form>
+            <p id="post-flash" class="flash" hidden></p>
+          </section>
+
+          <section class="card">
+            <div class="row">
+              <h2>タイムライン</h2>
+              <button type="button" id="reload-btn" class="secondary">再読み込み</button>
+            </div>
+            <div id="timeline"></div>
+          </section>
+        </div>
+
+        <div class="column">
+          <section class="card">
+            <h2>OpenRouter APIキー</h2>
+            <p id="key-status" class="muted"></p>
+            <form id="key-form" class="stack">
+              <label>APIキー（保存後は表示されません）<input id="api-key" type="password" autocomplete="off" /></label>
+              <div class="row">
+                <button type="submit">保存・更新</button>
+                <button type="button" id="key-delete" class="danger">削除</button>
+              </div>
+            </form>
+            <p id="key-flash" class="flash" hidden></p>
+          </section>
+
+          <section class="card">
+            <h2>LLMアカウント</h2>
+            <form id="llm-create-form" class="stack">
+              <label>表示名<input name="displayName" maxlength="30" required /></label>
+              <label>使用モデル<select name="modelId" class="model-select"></select></label>
+              <label>投稿生成用の指示文<textarea name="instruction" rows="3" maxlength="500" required></textarea></label>
+              <button type="submit">LLMアカウントを作成</button>
+            </form>
+            <div id="llm-list"></div>
+            <p id="llm-flash" class="flash" hidden></p>
+          </section>
+
+          <section class="card" id="admin-section" hidden>
+            <h2>管理者: ユーザー管理</h2>
+            <div id="admin-users"></div>
+            <p id="admin-flash" class="flash" hidden></p>
+          </section>
+        </div>
+      </main>
+    </section>
+
+    <script src="/app.js" type="module"></script>
+  </body>
+</html>

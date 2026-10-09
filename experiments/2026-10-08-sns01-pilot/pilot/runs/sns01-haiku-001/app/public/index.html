@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SNS-01 BOK対応SNS</title>
+  <link rel="stylesheet" href="/public/style.css">
+</head>
+<body>
+  <div id="app">
+    <!-- Login/Register Screen -->
+    <div id="authScreen" class="screen">
+      <div class="container">
+        <h1>SNS-01 BOK対応SNS</h1>
+        <div class="auth-tabs">
+          <button id="loginTab" class="tab-button active">ログイン</button>
+          <button id="registerTab" class="tab-button">登録</button>
+        </div>
+
+        <form id="loginForm" class="auth-form">
+          <input type="text" id="loginUsername" placeholder="ユーザー名" required>
+          <input type="password" id="loginPassword" placeholder="パスワード" required>
+          <button type="submit">ログイン</button>
+          <div id="loginError" class="error"></div>
+        </form>
+
+        <form id="registerForm" class="auth-form" style="display: none;">
+          <input type="text" id="registerUsername" placeholder="ユーザー名" required>
+          <input type="password" id="registerPassword" placeholder="パスワード" required>
+          <button type="submit">登録</button>
+          <div id="registerError" class="error"></div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Main App Screen -->
+    <div id="mainScreen" class="screen" style="display: none;">
+      <div class="sidebar">
+        <div class="user-info">
+          <h2 id="currentUsername"></h2>
+          <span id="userRole"></span>
+          <button id="logoutBtn" class="btn-secondary">ログアウト</button>
+        </div>
+
+        <div class="section">
+          <h3>OpenRouter API</h3>
+          <div id="keyStatus" class="key-status"></div>
+          <input type="password" id="apiKeyInput" placeholder="APIキー">
+          <div class="button-group">
+            <button id="setKeyBtn" class="btn-primary">設定</button>
+            <button id="deleteKeyBtn" class="btn-secondary">削除</button>
+          </div>
+        </div>
+
+        <div class="section" id="llmSection">
+          <h3>LLMアカウント</h3>
+          <div id="llmAccountsList"></div>
+          <button id="newLlmBtn" class="btn-primary">新規作成</button>
+        </div>
+
+        <div class="section" id="adminSection" style="display: none;">
+          <h3>管理機能</h3>
+          <button id="manageUsersBtn" class="btn-primary">ユーザー管理</button>
+        </div>
+      </div>
+
+      <div class="main-content">
+        <div id="timeline" class="timeline"></div>
+      </div>
+    </div>
+
+    <!-- Post Form Modal -->
+    <div id="postModal" class="modal" style="display: none;">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h3>投稿</h3>
+        <form id="postForm">
+          <textarea id="postContent" placeholder="何か投稿してみましょう" maxlength="140"></textarea>
+          <div class="char-count">
+            <span id="charCount">0</span>/140
+          </div>
+          <button type="submit">投稿する</button>
+          <div id="postError" class="error"></div>
+        </form>
+      </div>
+    </div>
+
+    <!-- LLM Account Modal -->
+    <div id="llmModal" class="modal" style="display: none;">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h3 id="llmModalTitle">LLMアカウント作成</h3>
+        <form id="llmForm">
+          <input type="text" id="llmDisplayName" placeholder="表示名" required>
+          <select id="llmModel" required>
+            <option value="">モデル選択</option>
+            <option value="test/model-a">test/model-a</option>
+            <option value="test/model-b">test/model-b</option>
+          </select>
+          <textarea id="llmPrompt" placeholder="投稿生成用の指示文" required></textarea>
+          <button type="submit" id="llmSubmitBtn">作成</button>
+          <div id="llmError" class="error"></div>
+        </form>
+      </div>
+    </div>
+
+    <!-- User Management Modal -->
+    <div id="userManagementModal" class="modal" style="display: none;">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h3>ユーザー管理</h3>
+        <div id="usersList"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="/public/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+trial_id,model,model_id,harness_as_recorded,elapsed_seconds,api_equivalent_usd,cost_basis,uncached_input_tokens,cache_creation_tokens,cache_read_tokens,output_tokens,reproduced_high_impact_candidates,other_candidates,core_candidate_count,scanner_warnings,human_confirmed_vulnerability_count,functionality,audit_scope
+sns01-sol-003,GPT-6.1 Sol,gpt-6.1-sol,codex-cli 0.160.1,433.62,0.23881040,calculated_standard_short_context_rates_2026-10-10,23444,0,343424,15758,0,1,1,1,pending,pass,complete_recorded_scope
+sns01-luna-001,GPT-6 Luna,gpt-6-luna,codex-cli 0.160.1,123.82,0.00910376,calculated_standard_short_context_rates_2026-10-10,23833,0,164096,10159,0,4,4,0,pending,pass,complete_recorded_scope
+sns01-opus-001,Claude Opus 5.5,claude-opus-5-5,2.1.292 (Claude Code),395.6,1.59577240,saved_cli_total_cost_usd_not_actual_charge,44,61496,887242,46309,0,0,0,1,pending,pass,complete_recorded_scope
+sns01-sonnet-001,Claude Sonnet 5.5,claude-sonnet-5-5,2.1.292 (Claude Code),575.54,0.60532480,saved_cli_total_cost_usd_not_actual_charge,40,42768,602314,31371,0,0,0,1,pending,api_pass_ui_failure,browser_xss_unassessable
+sns01-haiku-001,Claude Haiku 4.5,claude-haiku-4-5-20251001,2.1.292 (Claude Code),397.96,0.52871820,saved_cli_total_cost_usd_not_actual_charge,345,62599,1778152,45072,2,0,2,0,pending,fail_server_crash,partial_due_to_server_crash
+sns01-astra-001,GPT-6 Astra,gpt-6-astra,codex-cli 0.160.1,549.61,2.10427000,calculated_standard_short_context_rates_2026-10-10,44581,0,514560,22878,0,0,0,1,pending,pass,complete_recorded_scope
+sns01-haiku-003,Claude Haiku 5.5,claude-haiku-5-5,2.1.293 (Claude Code),340.36,0.12442035,saved_cli_total_cost_usd_not_actual_charge,46,106377,1629247,89748,0,2,2,1,pending,pass,complete_recorded_scope

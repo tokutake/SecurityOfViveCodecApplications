@@ -1,0 +1,17 @@
+body { font-family: sans-serif; max-width: 760px; margin: 0 auto; padding: 8px 12px; background: #f5f6f8; color: #222; }
+header { display: flex; justify-content: space-between; align-items: center; }
+section { background: #fff; border: 1px solid #ddd; border-radius: 6px; padding: 10px 14px; margin: 10px 0; }
+h2 { font-size: 1.05em; margin: 0 0 8px; }
+textarea, input, select { font: inherit; padding: 4px; box-sizing: border-box; }
+textarea { width: 100%; }
+button { font: inherit; cursor: pointer; }
+#msg { min-height: 1.4em; color: #b00020; font-weight: bold; }
+#msg.ok { color: #1b6e2d; }
+.post { border-top: 1px solid #eee; padding: 8px 0; }
+.post .meta { font-size: .85em; color: #666; }
+.post .body { white-space: pre-wrap; overflow-wrap: anywhere; margin: 4px 0; }
+.badge { background: #5b3fd1; color: #fff; border-radius: 3px; padding: 0 5px; font-size: .8em; margin-left: 4px; }
+.badge.warn { background: #b00020; }
+.row { display: flex; gap: 6px; flex-wrap: wrap; align-items: center; margin: 4px 0; }
+.llm { border: 1px solid #e0e0e0; border-radius: 4px; padding: 6px; margin: 6px 0; }
+.count.over { color: #b00020; }

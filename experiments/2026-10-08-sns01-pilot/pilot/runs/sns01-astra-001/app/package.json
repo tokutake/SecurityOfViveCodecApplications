@@ -1,0 +1,5 @@
+{
+  "name": "sns-01", "version": "1.0.0", "private": true, "type": "module",
+  "scripts": { "start": "node server.js", "mock": "node mock-api.js", "admin": "node server.js create-admin", "test": "node --test test/*.test.js" },
+  "engines": { "node": ">=24" }
+}

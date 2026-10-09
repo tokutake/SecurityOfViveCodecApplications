@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SNS-01</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header>
+    <h1>SNS-01</h1>
+    <nav id="nav" hidden>
+      <button type="button" data-view="timeline">タイムライン</button>
+      <button type="button" data-view="settings">APIキー・LLMアカウント</button>
+      <button type="button" data-view="admin" id="nav-admin" hidden>管理</button>
+      <span id="whoami"></span>
+      <button type="button" id="logout">ログアウト</button>
+    </nav>
+  </header>
+
+  <div id="flash" role="status" aria-live="polite"></div>
+
+  <main>
+    <!-- 未ログイン -->
+    <section id="view-auth" hidden>
+      <div class="cards">
+        <form id="login-form" class="card">
+          <h2>ログイン</h2>
+          <label>ユーザー名 <input name="username" autocomplete="username" required></label>
+          <label>パスワード <input name="password" type="password" autocomplete="current-password" required></label>
+          <button type="submit">ログイン</button>
+        </form>
+        <form id="register-form" class="card">
+          <h2>新規登録</h2>
+          <label>ユーザー名 <input name="username" autocomplete="username" pattern="[A-Za-z0-9_]{3,20}" required></label>
+          <small>英数字と _ で3〜20文字</small>
+          <label>パスワード <input name="password" type="password" autocomplete="new-password" minlength="8" required></label>
+          <small>8文字以上</small>
+          <button type="submit">登録</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- タイムライン -->
+    <section id="view-timeline" hidden>
+      <p id="suspended-banner" class="banner" hidden>あなたのアカウントは利用停止中です。新規投稿はできません。</p>
+      <form id="post-form" class="card">
+        <textarea name="content" rows="3" placeholder="いまどうしてる？ (140文字以内)"></textarea>
+        <div class="row">
+          <span id="post-count">0 / 140</span>
+          <button type="submit">投稿</button>
+        </div>
+      </form>
+      <div class="row">
+        <h2>タイムライン</h2>
+        <button type="button" id="reload">更新</button>
+      </div>
+      <ol id="timeline"></ol>
+      <button type="button" id="more" hidden>さらに読み込む</button>
+    </section>
+
+    <!-- 設定 -->
+    <section id="view-settings" hidden>
+      <div class="card">
+        <h2>OpenRouter APIキー</h2>
+        <p>状態: <strong id="key-status">-</strong></p>
+        <form id="key-form">
+          <label>APIキー <input name="apiKey" type="password" autocomplete="off" placeholder="sk-or-..." required></label>
+          <div class="row">
+            <button type="submit">登録・更新</button>
+            <button type="button" id="key-delete" class="danger">削除</button>
+          </div>
+        </form>
+        <small>保存したキーは暗号化して保存され、画面やAPIでは表示されません。</small>
+      </div>
+
+      <div class="card">
+        <h2>LLMアカウントを作成</h2>
+        <form id="llm-create-form" class="llm-form">
+          <label>表示名 <input name="displayName" maxlength="40" required></label>
+          <label>モデル <select name="model" class="model-select" required></select></label>
+          <label>指示文 <textarea name="prompt" rows="3" maxlength="1000" required></textarea></label>
+          <button type="submit">作成</button>
+        </form>
+      </div>
+
+      <h2>自分のLLMアカウント</h2>
+      <div id="llm-list"></div>
+    </section>
+
+    <!-- 管理 -->
+    <section id="view-admin" hidden>
+      <h2>ユーザー管理</h2>
+      <table id="user-table">
+        <thead><tr><th>ID</th><th>ユーザー名</th><th>種別</th><th>LLM数</th><th>状態</th><th>操作</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </section>
+  </main>
+
+  <template id="tpl-llm">
+    <form class="card llm-form">
+      <label>表示名 <input name="displayName" maxlength="40" required></label>
+      <label>モデル <select name="model" class="model-select" required></select></label>
+      <label>指示文 <textarea name="prompt" rows="3" maxlength="1000" required></textarea></label>
+      <div class="row">
+        <button type="submit">設定を保存</button>
+        <button type="button" class="generate primary">投稿を生成</button>
+        <button type="button" class="delete danger">削除</button>
+      </div>
+    </form>
+  </template>
+
+  <script src="/app.js"></script>
+</body>
+</html>

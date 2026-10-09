@@ -1,0 +1,36 @@
+* { box-sizing: border-box; }
+body { margin: 0; font-family: system-ui, -apple-system, "Hiragino Sans", "Noto Sans JP", sans-serif; background: #f4f5f7; color: #222; }
+header { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem; padding: .6rem 1rem; background: #1f2937; color: #fff; }
+header h1 { font-size: 1.2rem; margin: 0; }
+nav { display: flex; flex-wrap: wrap; align-items: center; gap: .5rem; }
+nav button { background: #374151; color: #fff; border: 1px solid #4b5563; }
+nav button.active { background: #2563eb; border-color: #2563eb; }
+#whoami { margin-left: .5rem; font-size: .9rem; opacity: .9; }
+main { max-width: 760px; margin: 1rem auto; padding: 0 1rem; }
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; }
+.card { background: #fff; border: 1px solid #ddd; border-radius: 8px; padding: 1rem; margin-bottom: 1rem; }
+label { display: block; margin: .4rem 0; }
+input, select, textarea { width: 100%; padding: .4rem; font: inherit; border: 1px solid #bbb; border-radius: 4px; }
+textarea { resize: vertical; }
+button { font: inherit; padding: .35rem .8rem; border-radius: 4px; border: 1px solid #999; background: #fff; cursor: pointer; }
+button:disabled { opacity: .5; cursor: not-allowed; }
+button.primary { background: #2563eb; color: #fff; border-color: #2563eb; }
+button.danger { color: #b91c1c; border-color: #b91c1c; }
+.row { display: flex; align-items: center; justify-content: space-between; gap: .5rem; flex-wrap: wrap; }
+small { color: #666; }
+#flash { max-width: 760px; margin: .5rem auto 0; padding: 0 1rem; }
+#flash .msg { padding: .5rem .8rem; border-radius: 4px; background: #e0f2fe; border: 1px solid #7dd3fc; }
+#flash .msg.error { background: #fee2e2; border-color: #fca5a5; }
+.banner { background: #fef3c7; border: 1px solid #f59e0b; padding: .5rem .8rem; border-radius: 4px; }
+#post-count.over { color: #b91c1c; font-weight: bold; }
+#timeline { list-style: none; padding: 0; }
+.post { background: #fff; border: 1px solid #ddd; border-radius: 8px; padding: .7rem 1rem; margin-bottom: .6rem; }
+.post.llm { border-left: 4px solid #7c3aed; }
+.post .meta { display: flex; flex-wrap: wrap; gap: .5rem; align-items: center; font-size: .85rem; color: #555; }
+.post .name { font-weight: bold; color: #111; }
+.post .content { margin: .4rem 0; white-space: pre-wrap; overflow-wrap: anywhere; }
+.badge { font-size: .75rem; padding: .05rem .4rem; border-radius: 3px; background: #ede9fe; color: #5b21b6; border: 1px solid #c4b5fd; }
+.badge.human { background: #ecfdf5; color: #065f46; border-color: #6ee7b7; }
+.badge.model { background: #f3f4f6; color: #374151; border-color: #d1d5db; font-family: ui-monospace, monospace; }
+table { width: 100%; border-collapse: collapse; background: #fff; }
+th, td { border: 1px solid #ddd; padding: .4rem; text-align: left; }
