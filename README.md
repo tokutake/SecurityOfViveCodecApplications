@@ -4,6 +4,9 @@
 
 共通のアプリ仕様に対する生成結果を比較し、どのようなセキュリティ上の問題が生じるかを明らかにすることを目的とします。
 
-終了した実験の資料は [SNS-01予備実験](experiments/2026-10-08-sns01-pilot/README.md) にまとめています。
+## 実験一覧
 
-フレームワーク指定とセキュリティ指示を比較した探索的パイロットは [Framework Security Comparison — Luna 01](experiments/framework-security-comparison-luna-01/README.md) を参照してください。各条件1回の予備的な結果であり、セキュリティ上の優劣を結論するものではありません。
+| 実験 | 状態 | 概要 |
+| --- | --- | --- |
+| [SNS-01予備実験](experiments/2026-10-08-sns01-pilot/README.md) | 終了 | 7モデルが生成したSNSアプリの機能とセキュリティを評価。脆弱性候補の人手による最終判定は未完了。 |
+| [Framework Security Comparison — Luna 01](experiments/framework-security-comparison-luna-01/README.md) | 探索的パイロット終了 | フレームワーク指定とセキュリティ指示の6条件を各1回比較。機能要件を通過した4件をセキュリティ評価し、自動検出候補3件は未検証。結果から条件の優劣は結論できない。 |
