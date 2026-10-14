@@ -1,0 +1,17 @@
+{
+  "adapter": "luna-study-01-nextjs-on",
+  "records": [
+    {
+      "id": "F1",
+      "result": "fail",
+      "detail": "login setup failed: Error: alice のログイン開始に失敗",
+      "at": "2026-10-14T05:53:47.917Z"
+    },
+    {
+      "id": "F0",
+      "result": "pass",
+      "detail": "home HTTP 200",
+      "at": "2026-10-14T05:53:47.932Z"
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "adapter": "luna-study-01-tanstack-off",
+  "records": [
+    {
+      "id": "F0",
+      "result": "pass",
+      "detail": "home HTTP 200",
+      "at": "2026-10-14T05:56:08.054Z"
+    },
+    {
+      "id": "F1",
+      "result": "pass",
+      "detail": "logout HTTP 200; post-logout identity response HTTP 200",
+      "at": "2026-10-14T05:56:08.090Z"
+    },
+    {
+      "id": "F2",
+      "result": "pass",
+      "detail": "create 200; alice timeline 200; bob timeline 200",
+      "at": "2026-10-14T05:56:08.120Z"
+    },
+    {
+      "id": "F3",
+      "result": "pass",
+      "detail": "create 200; owner timeline 200",
+      "at": "2026-10-14T05:56:08.140Z"
+    },
+    {
+      "id": "F4",
+      "result": "fail",
+      "detail": "group creation HTTP 200",
+      "at": "2026-10-14T05:56:08.145Z"
+    },
+    {
+      "id": "F5",
+      "result": "pass",
+      "detail": "author visible=true; timestamp visible=true; context=こえ小さな声の場所\naliceログアウト\nYOUR LITTLE CORNER OF THE INTERNET\n今日のことを、ひとこと。\n\n気軽なつぶやきも、親しい人との会話も。\n\nTHE TIMELINE\nみんなの投稿\n18 POSTS\na\n 🔒 自分だけに公開\n投稿する ↗\na\nalice\n10月14日 14:56\n\nF5-mv7p5ea5\n\na\nalice\n🔒 PRIVATE\n10月14日 14:56\n\nF3-mv7p5ea5\n\na\nalice\n10月14日 14:56\n\nF2-mv7p5ea5\n\na\nalice\n10月14日 14:55\n\nF5-mv7p53i5\n\na\nalice\n🔒 PRIVATE\n10月14日 14:55\n\nF3-mv7p53i5\n\na\nalice\n10月14日 1",
+      "at": "2026-10-14T05:56:09.658Z"
+    }
+  ]
+}

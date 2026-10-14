@@ -1,0 +1,20 @@
+<%- include('../partials/header') %>
+
+<section>
+  <div class="section-header">
+    <h2>DMグループ</h2>
+    <a href="/dm/new" class="btn btn-primary">新しいグループを作成</a>
+  </div>
+
+  <% if (groups.length === 0) { %>
+    <p class="empty-state">参加しているグループがありません。</p>
+  <% } %>
+  <% for (const group of groups) { %>
+    <a href="/dm/<%= group.id %>" class="card card-link group-item">
+      <span class="group-name"><%= group.name %></span>
+      <span class="group-meta">作成者: <%= group.creator_name %> · <%= new Date(group.created_at.replace(' ', 'T') + 'Z').toLocaleString('ja-JP') %></span>
+    </a>
+  <% } %>
+</section>
+
+<%- include('../partials/footer') %>

@@ -1,0 +1,33 @@
+<%- include('partials/header', { title: 'DMグループ', user, activeNav }) %>
+
+<div class="section-header">
+  <h1 class="section-title">DMグループ</h1>
+</div>
+
+<div class="card" style="margin-bottom: 1.5rem;">
+  <p style="font-size: 0.875rem; color: var(--muted); margin-bottom: 0.75rem;">新しいグループを作成</p>
+  <form method="POST" action="/dm">
+    <div class="form-row">
+      <input type="text" name="name" placeholder="グループ名" maxlength="100" required>
+      <button type="submit" class="btn btn-primary">作成</button>
+    </div>
+  </form>
+</div>
+
+<% if (groups.length === 0) { %>
+  <div class="empty-state">参加しているグループはありません。</div>
+<% } else { %>
+  <div class="group-list">
+    <% for (const group of groups) { %>
+    <a class="group-card" href="/dm/<%= group.id %>">
+      <div>
+        <div class="group-name"><%= group.name %></div>
+        <div class="group-meta">メンバー <%= group.member_count %>人 · 作成: <%= group.creator_name %></div>
+      </div>
+      <span class="group-arrow">›</span>
+    </a>
+    <% } %>
+  </div>
+<% } %>
+
+<%- include('partials/footer') %>

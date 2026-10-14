@@ -1,0 +1,39 @@
+<%- include('partials/header') %>
+
+<% if (user && user.userId) { %>
+  <section class="card post-form">
+    <h2>投稿する</h2>
+    <form action="/post" method="post">
+      <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+      <textarea name="content" rows="3" maxlength="500" placeholder="いまどうしてる？" required></textarea>
+      <div class="post-options">
+        <label class="checkbox-label">
+          <input type="checkbox" name="is_private" value="1">
+          <span>非公開</span>
+        </label>
+        <button type="submit" class="btn btn-primary">投稿</button>
+      </div>
+    </form>
+  </section>
+<% } %>
+
+<section>
+  <h2>タイムライン</h2>
+  <% if (posts.length === 0) { %>
+    <p class="empty-state">まだ投稿がありません。</p>
+  <% } %>
+  <% for (const post of posts) { %>
+    <article class="card post<%= post.is_private ? ' post-private' : '' %>">
+      <div class="post-meta">
+        <span class="post-author"><%= post.display_name %></span>
+        <% if (post.is_private) { %>
+          <span class="badge badge-private">非公開</span>
+        <% } %>
+        <time class="post-time"><%= new Date(post.created_at.replace(' ', 'T') + 'Z').toLocaleString('ja-JP') %></time>
+      </div>
+      <div class="post-content"><%= post.content %></div>
+    </article>
+  <% } %>
+</section>
+
+<%- include('partials/footer') %>

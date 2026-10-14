@@ -1,0 +1,41 @@
+{
+  "adapter": "luna-study-01-tanstack-off",
+  "records": [
+    {
+      "id": "F0",
+      "result": "pass",
+      "detail": "home HTTP 200",
+      "at": "2026-10-14T06:03:22.160Z"
+    },
+    {
+      "id": "F1",
+      "result": "pass",
+      "detail": "logout HTTP 200; post-logout identity response HTTP 200",
+      "at": "2026-10-14T06:03:22.196Z"
+    },
+    {
+      "id": "F2",
+      "result": "pass",
+      "detail": "create 200; alice timeline 200; bob timeline 200",
+      "at": "2026-10-14T06:03:22.211Z"
+    },
+    {
+      "id": "F3",
+      "result": "pass",
+      "detail": "create 200; owner timeline 200",
+      "at": "2026-10-14T06:03:22.220Z"
+    },
+    {
+      "id": "F4",
+      "result": "pass",
+      "detail": "Alice send 200; Bob send 200; Alice read 200; Bob read 200",
+      "at": "2026-10-14T06:03:22.247Z"
+    },
+    {
+      "id": "F5",
+      "result": "pass",
+      "detail": "author visible=true; timestamp visible=true; context=こえ小さな声の場所\naliceログアウト\nYOUR LITTLE CORNER OF THE INTERNET\n今日のことを、ひとこと。\n\n気軽なつぶやきも、親しい人との会話も。\n\nTHE TIMELINE\nみんなの投稿\n3 POSTS\na\n 🔒 自分だけに公開\n投稿する ↗\na\nalice\n10月14日 15:03\n\nF5-mv7pep7x\n\na\nalice\n🔒 PRIVATE\n10月14日 15:03\n\nF3-mv7pep7x\n\na\nalice\n10月14日 15:03\n\nF2-mv7pep7x\n\n✳\nPRIVATE SPACE\nDMグループ\nメンバーを選ぶ\nbob\nグループを作成\n＋\n◌\nfunctional-mv7pep7x\n›\n✦\n\nあなたのペースで、\nあなたの言葉を。\n\nこえ — ",
+      "at": "2026-10-14T06:03:23.565Z"
+    }
+  ]
+}

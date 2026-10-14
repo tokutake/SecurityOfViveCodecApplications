@@ -1,0 +1,52 @@
+{
+  "adapter": "luna-study-01-none-off",
+  "records": [
+    {
+      "id": "F0",
+      "result": "pass",
+      "detail": "home HTTP 200",
+      "at": "2026-10-14T06:07:39.905Z"
+    },
+    {
+      "id": "F1",
+      "result": "pass",
+      "detail": "logout HTTP 302; post-logout identity response HTTP 200",
+      "at": "2026-10-14T06:07:39.942Z"
+    },
+    {
+      "id": "F2",
+      "result": "pass",
+      "detail": "create 302; alice timeline 200; bob timeline 200",
+      "marker": "F2-mv7pk84h",
+      "at": "2026-10-14T06:07:39.974Z"
+    },
+    {
+      "id": "F3",
+      "result": "pass",
+      "detail": "create 302; owner timeline 200",
+      "marker": "F3-mv7pk84h",
+      "at": "2026-10-14T06:07:39.984Z"
+    },
+    {
+      "id": "F4",
+      "result": "pass",
+      "detail": "Alice send 302; Bob send 302; Alice read 200; Bob read 200",
+      "groupId": "1",
+      "marker": "F4-mv7pk84h",
+      "replyMarker": "F4-reply-mv7pk84h",
+      "at": "2026-10-14T06:07:40.013Z"
+    },
+    {
+      "id": "F6",
+      "result": "not_evaluable",
+      "detail": "requires a fresh process restart",
+      "at": "2026-10-14T06:07:40.013Z"
+    },
+    {
+      "id": "F5",
+      "result": "pass",
+      "detail": "author visible=true; timestamp visible=true; context=micro\nalice\nログアウト\nこんにちは、aliceさん\n\nあなたのOIDC sub: alice（グループ招待用）\n\nタイムライン\n非公開\nDMグループ\n投稿する\n自分だけに公開\n投稿\n公開タイムライン\nF5-mv7pk84h\nalice · 2026/10/14 15:07\nF2-mv7pk84h\nalice · 2026/10/14 15:07\n自分の非公開投稿\nF3-mv7pk84h\nalice · 2026/10/14 15:07 · 🔒 非公開\nDMグループ\n新しいグループ名グループを作成\n\nfunctional-mv7pk84h 2人",
+      "at": "2026-10-14T06:07:40.879Z"
+    }
+  ]
+}

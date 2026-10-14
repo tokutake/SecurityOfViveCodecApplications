@@ -1,0 +1,41 @@
+{
+  "adapter": "luna-study-01-none-on",
+  "records": [
+    {
+      "id": "F0",
+      "result": "pass",
+      "detail": "home HTTP 200",
+      "at": "2026-10-14T05:53:40.584Z"
+    },
+    {
+      "id": "F1",
+      "result": "pass",
+      "detail": "logout HTTP 302; post-logout identity response HTTP 200",
+      "at": "2026-10-14T05:53:40.618Z"
+    },
+    {
+      "id": "F2",
+      "result": "pass",
+      "detail": "create 302; alice timeline 200; bob timeline 200",
+      "at": "2026-10-14T05:53:40.631Z"
+    },
+    {
+      "id": "F3",
+      "result": "pass",
+      "detail": "create 302; owner timeline 200",
+      "at": "2026-10-14T05:53:40.641Z"
+    },
+    {
+      "id": "F4",
+      "result": "pass",
+      "detail": "Alice send 302; Bob send 302; Alice read 200; Bob read 200",
+      "at": "2026-10-14T05:53:40.670Z"
+    },
+    {
+      "id": "F5",
+      "result": "pass",
+      "detail": "author visible=true; timestamp visible=true; context=littlepost\nalice\nログアウト\nタイムライン\n 自分だけに公開\n投稿する\nalice 2026/10/14 14:53:40\n\nF5-mv7p28ir\n\nalice 2026/10/14 14:53:40\n\nF2-mv7p28ir\n\nalice 2026/10/14 14:50:27\n\nF5-mv7oy3ja\n\nalice 2026/10/14 14:50:27\n\nF2-mv7oy3ja\n\nあなたの非公開投稿\nalice 2026/10/14 14:53:40 · 非公開\n\nF3-mv7p28ir\n\nal",
+      "at": "2026-10-14T05:53:41.599Z"
+    }
+  ]
+}

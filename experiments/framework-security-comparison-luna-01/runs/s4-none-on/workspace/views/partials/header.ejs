@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MicroSNS</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a href="/" class="site-title">MicroSNS</a>
+      <nav>
+        <% if (user && user.userId) { %>
+          <a href="/">タイムライン</a>
+          <a href="/dm">DM</a>
+          <span class="nav-username"><%= user.displayName %></span>
+          <form action="/auth/logout" method="post" class="logout-form">
+            <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+            <button type="submit" class="btn-link">ログアウト</button>
+          </form>
+        <% } else { %>
+          <a href="/">タイムライン</a>
+          <a href="/auth/login" class="btn">ログイン</a>
+        <% } %>
+      </nav>
+    </div>
+  </header>
+  <main class="container">
+    <% if (flash) { %>
+      <div class="flash flash-<%= flash.type %>"><%= flash.message %></div>
+    <% } %>

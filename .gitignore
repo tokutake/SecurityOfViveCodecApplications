@@ -7,3 +7,11 @@ node_modules/
 !.env.example
 auth.json
 *.db
+.private/
+**/node_modules/
+experiments/framework-security-comparison-luna-01/**/.next/
+experiments/framework-security-comparison-luna-01/**/dist/
+experiments/framework-security-comparison-luna-01/**/.output/
+experiments/framework-security-comparison-luna-01/**/.turbo/
+experiments/framework-security-comparison-luna-01/**/*.sqlite
+experiments/framework-security-comparison-luna-01/**/*.sqlite-*

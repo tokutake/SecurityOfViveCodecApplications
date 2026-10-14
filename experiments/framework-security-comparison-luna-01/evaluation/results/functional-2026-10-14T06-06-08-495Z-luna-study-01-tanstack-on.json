@@ -1,0 +1,41 @@
+{
+  "adapter": "luna-study-01-tanstack-on",
+  "records": [
+    {
+      "id": "F1",
+      "result": "fail",
+      "detail": "login setup failed: TypeError: fetch failed",
+      "at": "2026-10-14T06:06:08.481Z"
+    },
+    {
+      "id": "F1",
+      "result": "not_evaluable",
+      "detail": "F0 startup gate failed",
+      "at": "2026-10-14T06:06:08.490Z"
+    },
+    {
+      "id": "F2",
+      "result": "not_evaluable",
+      "detail": "F0 startup gate failed",
+      "at": "2026-10-14T06:06:08.491Z"
+    },
+    {
+      "id": "F3",
+      "result": "not_evaluable",
+      "detail": "F0 startup gate failed",
+      "at": "2026-10-14T06:06:08.492Z"
+    },
+    {
+      "id": "F4",
+      "result": "not_evaluable",
+      "detail": "F0 startup gate failed",
+      "at": "2026-10-14T06:06:08.492Z"
+    },
+    {
+      "id": "F5",
+      "result": "not_evaluable",
+      "detail": "F0 startup gate failed",
+      "at": "2026-10-14T06:06:08.492Z"
+    }
+  ]
+}

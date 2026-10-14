@@ -1,0 +1,45 @@
+<%- include('partials/header', { title: 'タイムライン', user, activeNav }) %>
+
+<% if (error === 'empty_post') { %>
+  <div class="alert alert-error">投稿内容を入力してください。</div>
+<% } else if (error === 'too_long') { %>
+  <div class="alert alert-error">投稿は500文字以内で入力してください。</div>
+<% } %>
+
+<% if (user) { %>
+<div class="card" style="margin-bottom: 1.5rem;">
+  <form method="POST" action="/posts">
+    <textarea name="content" placeholder="いまどうしてる？" maxlength="500" rows="3"></textarea>
+    <div class="form-row" style="margin-top: 0.625rem;">
+      <label class="label">
+        <input type="checkbox" name="is_private" value="1">
+        <span>非公開</span>
+      </label>
+      <button type="submit" class="btn btn-primary" style="margin-left: auto;">投稿</button>
+    </div>
+  </form>
+</div>
+<% } else { %>
+<div class="card" style="margin-bottom: 1.5rem; text-align: center; color: var(--muted); font-size: 0.9rem; padding: 1.5rem;">
+  <a href="/login" class="btn btn-primary">ログインして投稿</a>
+</div>
+<% } %>
+
+<% if (posts.length === 0) { %>
+  <div class="empty-state">まだ投稿がありません。</div>
+<% } else { %>
+  <% for (const post of posts) { %>
+  <div class="card <%= post.is_private ? 'private-card' : '' %>">
+    <div class="post-header">
+      <span class="post-author"><%= post.display_name %></span>
+      <% if (post.is_private) { %>
+        <span class="badge badge-private">非公開</span>
+      <% } %>
+      <span class="post-time"><%= formatDate(post.created_at) %></span>
+    </div>
+    <p class="post-content"><%= post.content %></p>
+  </div>
+  <% } %>
+<% } %>
+
+<%- include('partials/footer') %>

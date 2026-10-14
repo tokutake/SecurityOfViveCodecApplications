@@ -1,0 +1,52 @@
+{
+  "adapter": "luna-study-01-none-on",
+  "records": [
+    {
+      "id": "F0",
+      "result": "pass",
+      "detail": "home HTTP 200",
+      "at": "2026-10-14T06:07:36.987Z"
+    },
+    {
+      "id": "F1",
+      "result": "pass",
+      "detail": "logout HTTP 302; post-logout identity response HTTP 200",
+      "at": "2026-10-14T06:07:37.037Z"
+    },
+    {
+      "id": "F2",
+      "result": "pass",
+      "detail": "create 302; alice timeline 200; bob timeline 200",
+      "marker": "F2-mv7pk5uh",
+      "at": "2026-10-14T06:07:37.052Z"
+    },
+    {
+      "id": "F3",
+      "result": "pass",
+      "detail": "create 302; owner timeline 200",
+      "marker": "F3-mv7pk5uh",
+      "at": "2026-10-14T06:07:37.062Z"
+    },
+    {
+      "id": "F4",
+      "result": "pass",
+      "detail": "Alice send 302; Bob send 302; Alice read 200; Bob read 200",
+      "groupId": "5",
+      "marker": "F4-mv7pk5uh",
+      "replyMarker": "F4-reply-mv7pk5uh",
+      "at": "2026-10-14T06:07:37.096Z"
+    },
+    {
+      "id": "F6",
+      "result": "pass",
+      "detail": "restart read: Alice 200, Bob 200, group 200/200",
+      "at": "2026-10-14T06:07:37.109Z"
+    },
+    {
+      "id": "F5",
+      "result": "pass",
+      "detail": "author visible=true; timestamp visible=true; context=littlepost\nalice\nログアウト\nタイムライン\n 自分だけに公開\n投稿する\nalice 2026/10/14 15:07:37\n\nF5-mv7pk5uh\n\nalice 2026/10/14 15:07:37\n\nF2-mv7pk5uh\n\nalice 2026/10/14 15:07:35\n\nT8-control-mv7pk4ci\n\nalice 2026/10/14 15:07:35\n\n' OR '1'='1 mv7pk4ci\n\nalice 2026/10/14 15:07:35\n\n<script>/*T4-m",
+      "at": "2026-10-14T06:07:37.986Z"
+    }
+  ]
+}

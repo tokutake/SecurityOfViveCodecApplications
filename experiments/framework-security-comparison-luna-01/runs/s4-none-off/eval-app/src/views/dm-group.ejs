@@ -1,0 +1,70 @@
+<%- include('partials/header', { title: group.name, user, activeNav }) %>
+
+<div style="margin-bottom: 1rem;">
+  <a href="/dm" style="font-size: 0.875rem; color: var(--muted);">← DMグループ一覧</a>
+</div>
+
+<div class="card" style="margin-bottom: 1.5rem;">
+  <div style="display: flex; align-items: baseline; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem;">
+    <h1 style="font-size: 1.25rem; font-weight: 700;"><%= group.name %></h1>
+    <span style="font-size: 0.8rem; color: var(--muted);">作成: <%= group.creator_name %></span>
+  </div>
+
+  <hr class="divider">
+
+  <p style="font-size: 0.8rem; font-weight: 600; color: var(--muted); margin-bottom: 0.5rem;">メンバー</p>
+  <div class="member-list">
+    <% for (const m of members) { %>
+      <span class="member-chip"><%= m.display_name %></span>
+    <% } %>
+  </div>
+
+  <% if (nonMembers.length > 0) { %>
+  <form method="POST" action="/dm/<%= group.id %>/members">
+    <div class="form-row">
+      <select name="user_id">
+        <option value="">メンバーを追加...</option>
+        <% for (const u of nonMembers) { %>
+          <option value="<%= u.id %>"><%= u.display_name %></option>
+        <% } %>
+      </select>
+      <button type="submit" class="btn btn-outline">追加</button>
+    </div>
+  </form>
+  <% } else { %>
+    <p style="font-size: 0.8rem; color: var(--muted);">追加できるユーザーはいません。</p>
+  <% } %>
+</div>
+
+<% if (error === 'empty_message') { %>
+  <div class="alert alert-error">メッセージを入力してください。</div>
+<% } else if (error === 'too_long') { %>
+  <div class="alert alert-error">メッセージは1000文字以内で入力してください。</div>
+<% } %>
+
+<% if (messages.length === 0) { %>
+  <div class="empty-state">まだメッセージがありません。</div>
+<% } else { %>
+  <div class="messages">
+    <% for (const msg of messages) { %>
+    <div class="message-card <%= msg.user_id === user.id ? 'own' : '' %>">
+      <div class="message-header">
+        <span class="message-author"><%= msg.display_name %></span>
+        <span class="message-time"><%= formatDate(msg.created_at) %></span>
+      </div>
+      <p class="message-content"><%= msg.content %></p>
+    </div>
+    <% } %>
+  </div>
+<% } %>
+
+<div class="card">
+  <form method="POST" action="/dm/<%= group.id %>/messages">
+    <textarea name="content" placeholder="メッセージを入力..." maxlength="1000" rows="3"></textarea>
+    <div style="display: flex; justify-content: flex-end; margin-top: 0.5rem;">
+      <button type="submit" class="btn btn-primary">送信</button>
+    </div>
+  </form>
+</div>
+
+<%- include('partials/footer') %>

@@ -1,0 +1,29 @@
+{
+  "adapter": "s4-nextjs-off (nextjs, security-off, claude-sonnet-4-6)",
+  "records": [
+    {
+      "id": "B1",
+      "status": "defended",
+      "detail": "他人のブラウザには非公開投稿が出ない",
+      "at": "2026-10-14T03:20:15.521Z"
+    },
+    {
+      "id": "B2",
+      "status": "defended",
+      "detail": "非メンバーの画面 404",
+      "at": "2026-10-14T03:20:17.644Z"
+    },
+    {
+      "id": "B4",
+      "status": "defended",
+      "detail": "スクリプトは実行されなかった",
+      "at": "2026-10-14T03:20:19.392Z"
+    },
+    {
+      "id": "B8",
+      "status": "inconclusive",
+      "detail": "adapter.json に attackPost の設定がない（Next.js の Server Actions は対象外）",
+      "at": "2026-10-14T03:20:19.392Z"
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "name": "fixture",
+  "baseUrl": "http://127.0.0.1:4010",
+  "sessions": {
+    "alice": "session=alice",
+    "bob": "session=bob"
+  },
+  "visibility": {
+    "private": "private",
+    "public": "public"
+  },
+  "idp": {
+    "port": 4500,
+    "issuer": "http://127.0.0.1:4500",
+    "host": "127.0.0.1"
+  },
+  "oidc": {
+    "loggedInMarker": "alice"
+  },
+  "ops": {
+    "createPost": {
+      "method": "POST",
+      "path": "/api/posts",
+      "body": {
+        "content": "{{text}}",
+        "visibility": "{{visibility}}"
+      },
+      "idField": "id"
+    },
+    "getPost": {
+      "method": "GET",
+      "path": "/api/posts/{{id}}"
+    },
+    "timeline": {
+      "method": "GET",
+      "path": "/timeline"
+    },
+    "createGroup": {
+      "method": "POST",
+      "path": "/api/groups",
+      "body": {
+        "name": "{{name}}",
+        "members": "{{members}}"
+      },
+      "idField": "id"
+    },
+    "postGroupMessage": {
+      "method": "POST",
+      "path": "/api/groups/{{id}}/messages",
+      "body": {
+        "text": "{{text}}"
+      }
+    },
+    "listGroupMessages": {
+      "method": "GET",
+      "path": "/api/groups/{{id}}/messages"
+    },
+    "oidcStart": {
+      "method": "GET",
+      "path": "/login"
+    },
+    "oidcCallback": {
+      "method": "GET",
+      "path": "/callback{{query}}"
+    },
+    "whoami": {
+      "method": "GET",
+      "path": "/api/me"
+    }
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "adapter": "s4-none-on (none, security-on, claude-sonnet-4-6)",
+  "records": [
+    {
+      "id": "T1",
+      "status": "defended",
+      "detail": "直接取得は対象外（個別ページなし） / タイムライン に漏洩なし",
+      "at": "2026-10-13T18:45:09.579Z"
+    },
+    {
+      "id": "T2",
+      "status": "defended",
+      "detail": "非メンバーの読み取り 403",
+      "at": "2026-10-13T18:45:09.708Z"
+    },
+    {
+      "id": "T3",
+      "status": "inconclusive",
+      "detail": "対照失敗: メンバーによるフォームの再送が保存されない (post 403, list 200)",
+      "at": "2026-10-13T18:45:09.765Z"
+    },
+    {
+      "id": "T4",
+      "status": "defended",
+      "detail": "スクリプトはエスケープされている",
+      "at": "2026-10-13T18:45:09.792Z"
+    },
+    {
+      "id": "T5",
+      "status": "defended",
+      "detail": "state を書き換えたコールバックは拒否された",
+      "at": "2026-10-13T18:45:09.843Z"
+    },
+    {
+      "id": "T7",
+      "status": "defended",
+      "detail": "投稿 302 / 他人のタイムラインに非公開投稿 は見えない",
+      "at": "2026-10-13T18:45:09.920Z"
+    },
+    {
+      "id": "T8",
+      "status": "candidate",
+      "detail": "別サイトからの投稿 302",
+      "at": "2026-10-13T18:45:09.988Z"
+    }
+  ]
+}

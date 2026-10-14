@@ -1,0 +1,41 @@
+{
+  "adapter": "luna-study-01-nextjs-on",
+  "records": [
+    {
+      "id": "F1",
+      "result": "fail",
+      "detail": "login setup failed: Error: login start HTTP 503; {\"error\":\"OIDC login is not configured correctly\"}",
+      "at": "2026-10-14T05:57:31.619Z"
+    },
+    {
+      "id": "F0",
+      "result": "pass",
+      "detail": "home HTTP 200",
+      "at": "2026-10-14T05:57:31.655Z"
+    },
+    {
+      "id": "F2",
+      "result": "not_evaluable",
+      "detail": "login setup failed: Error: login start HTTP 503; {\"error\":\"OIDC login is not configured correctly\"}",
+      "at": "2026-10-14T05:57:31.657Z"
+    },
+    {
+      "id": "F3",
+      "result": "not_evaluable",
+      "detail": "login setup failed: Error: login start HTTP 503; {\"error\":\"OIDC login is not configured correctly\"}",
+      "at": "2026-10-14T05:57:31.658Z"
+    },
+    {
+      "id": "F4",
+      "result": "not_evaluable",
+      "detail": "login setup failed: Error: login start HTTP 503; {\"error\":\"OIDC login is not configured correctly\"}",
+      "at": "2026-10-14T05:57:31.658Z"
+    },
+    {
+      "id": "F5",
+      "result": "not_evaluable",
+      "detail": "login setup failed: Error: login start HTTP 503; {\"error\":\"OIDC login is not configured correctly\"}",
+      "at": "2026-10-14T05:57:31.658Z"
+    }
+  ]
+}

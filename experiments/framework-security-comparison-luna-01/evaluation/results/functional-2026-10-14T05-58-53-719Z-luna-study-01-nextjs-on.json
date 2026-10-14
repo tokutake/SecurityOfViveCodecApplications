@@ -1,0 +1,41 @@
+{
+  "adapter": "luna-study-01-nextjs-on",
+  "records": [
+    {
+      "id": "F1",
+      "result": "fail",
+      "detail": "login setup failed: Error: alice として識別されない (200)",
+      "at": "2026-10-14T05:58:53.695Z"
+    },
+    {
+      "id": "F0",
+      "result": "pass",
+      "detail": "home HTTP 200",
+      "at": "2026-10-14T05:58:53.712Z"
+    },
+    {
+      "id": "F2",
+      "result": "not_evaluable",
+      "detail": "login setup failed: Error: alice として識別されない (200)",
+      "at": "2026-10-14T05:58:53.715Z"
+    },
+    {
+      "id": "F3",
+      "result": "not_evaluable",
+      "detail": "login setup failed: Error: alice として識別されない (200)",
+      "at": "2026-10-14T05:58:53.715Z"
+    },
+    {
+      "id": "F4",
+      "result": "not_evaluable",
+      "detail": "login setup failed: Error: alice として識別されない (200)",
+      "at": "2026-10-14T05:58:53.715Z"
+    },
+    {
+      "id": "F5",
+      "result": "not_evaluable",
+      "detail": "login setup failed: Error: alice として識別されない (200)",
+      "at": "2026-10-14T05:58:53.716Z"
+    }
+  ]
+}

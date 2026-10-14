@@ -1,0 +1,9 @@
+<%- include('partials/header', { title: 'エラー', user: user || null, activeNav: activeNav || '' }) %>
+
+<div class="card" style="text-align: center; padding: 2.5rem;">
+  <p style="font-size: 2rem; margin-bottom: 0.75rem;">⚠️</p>
+  <p style="font-size: 1rem; color: var(--text); margin-bottom: 1.5rem;"><%= message %></p>
+  <a href="/" class="btn btn-outline">トップへ戻る</a>
+</div>
+
+<%- include('partials/footer') %>

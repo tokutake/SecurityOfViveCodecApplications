@@ -1,0 +1,39 @@
+<%- include('../partials/header') %>
+
+<section>
+  <div class="section-header">
+    <h2><%= group.name %></h2>
+    <div class="members-list">
+      メンバー:
+      <% for (let i = 0; i < members.length; i++) { %><span class="member-name"><%= members[i].display_name %></span><% if (i < members.length - 1) { %>、<% } %><% } %>
+    </div>
+  </div>
+
+  <div class="messages" id="messages">
+    <% if (messages.length === 0) { %>
+      <p class="empty-state">まだメッセージがありません。</p>
+    <% } %>
+    <% for (const msg of messages) { %>
+      <article class="card message">
+        <div class="message-meta">
+          <span class="message-author"><%= msg.display_name %></span>
+          <time class="message-time"><%= new Date(msg.created_at.replace(' ', 'T') + 'Z').toLocaleString('ja-JP') %></time>
+        </div>
+        <div class="message-content"><%= msg.content %></div>
+      </article>
+    <% } %>
+  </div>
+
+  <div class="card message-form-wrap">
+    <form action="/dm/<%= group.id %>/message" method="post" class="message-form">
+      <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+      <textarea name="content" rows="3" maxlength="1000" placeholder="メッセージを入力..." required></textarea>
+      <div class="form-actions">
+        <button type="submit" class="btn btn-primary">送信</button>
+        <a href="/dm" class="btn">グループ一覧に戻る</a>
+      </div>
+    </form>
+  </div>
+</section>
+
+<%- include('../partials/footer') %>

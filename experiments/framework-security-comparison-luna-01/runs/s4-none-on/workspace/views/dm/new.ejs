@@ -1,0 +1,38 @@
+<%- include('../partials/header') %>
+
+<section class="card">
+  <h2>新しいDMグループを作成</h2>
+  <form action="/dm/new" method="post">
+    <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+
+    <div class="form-group">
+      <label for="name">グループ名</label>
+      <input type="text" id="name" name="name" maxlength="100" required placeholder="グループ名を入力">
+    </div>
+
+    <div class="form-group">
+      <label>メンバーを追加（任意）</label>
+      <% if (users.length === 0) { %>
+        <p class="empty-state">追加できるユーザーがいません。</p>
+      <% } else { %>
+        <ul class="user-select-list">
+          <% for (const u of users) { %>
+            <li>
+              <label class="checkbox-label">
+                <input type="checkbox" name="members" value="<%= u.id %>">
+                <span><%= u.display_name %></span>
+              </label>
+            </li>
+          <% } %>
+        </ul>
+      <% } %>
+    </div>
+
+    <div class="form-actions">
+      <button type="submit" class="btn btn-primary">作成</button>
+      <a href="/dm" class="btn">キャンセル</a>
+    </div>
+  </form>
+</section>
+
+<%- include('../partials/footer') %>

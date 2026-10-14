@@ -1,0 +1,41 @@
+{
+  "adapter": "luna-study-01-none-on",
+  "records": [
+    {
+      "id": "F0",
+      "result": "pass",
+      "detail": "home HTTP 200",
+      "at": "2026-10-14T05:54:41.276Z"
+    },
+    {
+      "id": "F1",
+      "result": "pass",
+      "detail": "logout HTTP 302; post-logout identity response HTTP 200",
+      "at": "2026-10-14T05:54:41.309Z"
+    },
+    {
+      "id": "F2",
+      "result": "pass",
+      "detail": "create 302; alice timeline 200; bob timeline 200",
+      "at": "2026-10-14T05:54:41.323Z"
+    },
+    {
+      "id": "F3",
+      "result": "pass",
+      "detail": "create 302; owner timeline 200",
+      "at": "2026-10-14T05:54:41.334Z"
+    },
+    {
+      "id": "F4",
+      "result": "pass",
+      "detail": "Alice send 302; Bob send 302; Alice read 200; Bob read 200",
+      "at": "2026-10-14T05:54:41.363Z"
+    },
+    {
+      "id": "F5",
+      "result": "pass",
+      "detail": "author visible=true; timestamp visible=true; context=littlepost\nalice\nログアウト\nタイムライン\n 自分だけに公開\n投稿する\nalice 2026/10/14 14:54:41\n\nF5-mv7p3jck\n\nalice 2026/10/14 14:54:41\n\nF2-mv7p3jck\n\nalice 2026/10/14 14:53:42\n\nT8-control-mv7p29ln\n\nalice 2026/10/14 14:53:42\n\n' OR '1'='1 mv7p29ln\n\nalice 2026/10/14 14:53:42\n\n<script>/*T4-m",
+      "at": "2026-10-14T05:54:42.366Z"
+    }
+  ]
+}

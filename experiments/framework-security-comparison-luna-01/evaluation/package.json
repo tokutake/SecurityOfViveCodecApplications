@@ -1,0 +1,19 @@
+{
+  "name": "sns-eval-harness",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test test/security.test.js",
+    "test:functional": "node --test test/functional.test.js",
+    "fixture:vuln": "VULN=1 node fixture/server.js",
+    "fixture:secure": "VULN=0 node fixture/server.js",
+    "idp": "node lib/mockIdp.js",
+    "test:browser": "node --test browser/browser.test.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "playwright": "^1.64.0"
+  }
+}

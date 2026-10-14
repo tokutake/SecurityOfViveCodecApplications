@@ -1,0 +1,41 @@
+{
+  "adapter": "luna-study-01-nextjs-on",
+  "records": [
+    {
+      "id": "F1",
+      "result": "fail",
+      "detail": "login setup failed: Error: alice として識別されない (callback 307; whoami 200; {\"user\":null}; claims=no session cookie)",
+      "at": "2026-10-14T06:06:03.413Z"
+    },
+    {
+      "id": "F0",
+      "result": "pass",
+      "detail": "home HTTP 200",
+      "at": "2026-10-14T06:06:03.429Z"
+    },
+    {
+      "id": "F2",
+      "result": "not_evaluable",
+      "detail": "login setup failed: Error: alice として識別されない (callback 307; whoami 200; {\"user\":null}; claims=no session cookie)",
+      "at": "2026-10-14T06:06:03.431Z"
+    },
+    {
+      "id": "F3",
+      "result": "not_evaluable",
+      "detail": "login setup failed: Error: alice として識別されない (callback 307; whoami 200; {\"user\":null}; claims=no session cookie)",
+      "at": "2026-10-14T06:06:03.431Z"
+    },
+    {
+      "id": "F4",
+      "result": "not_evaluable",
+      "detail": "login setup failed: Error: alice として識別されない (callback 307; whoami 200; {\"user\":null}; claims=no session cookie)",
+      "at": "2026-10-14T06:06:03.432Z"
+    },
+    {
+      "id": "F5",
+      "result": "not_evaluable",
+      "detail": "login setup failed: Error: alice として識別されない (callback 307; whoami 200; {\"user\":null}; claims=no session cookie)",
+      "at": "2026-10-14T06:06:03.432Z"
+    }
+  ]
+}

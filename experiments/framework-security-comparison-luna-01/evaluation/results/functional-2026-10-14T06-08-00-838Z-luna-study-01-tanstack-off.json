@@ -1,0 +1,52 @@
+{
+  "adapter": "luna-study-01-tanstack-off",
+  "records": [
+    {
+      "id": "F0",
+      "result": "pass",
+      "detail": "home HTTP 200",
+      "at": "2026-10-14T06:07:59.407Z"
+    },
+    {
+      "id": "F1",
+      "result": "pass",
+      "detail": "logout HTTP 200; post-logout identity response HTTP 200",
+      "at": "2026-10-14T06:07:59.442Z"
+    },
+    {
+      "id": "F2",
+      "result": "pass",
+      "detail": "create 200; alice timeline 200; bob timeline 200",
+      "marker": "F2-mv7pkn5n",
+      "at": "2026-10-14T06:07:59.466Z"
+    },
+    {
+      "id": "F3",
+      "result": "pass",
+      "detail": "create 200; owner timeline 200",
+      "marker": "F3-mv7pkn5n",
+      "at": "2026-10-14T06:07:59.475Z"
+    },
+    {
+      "id": "F4",
+      "result": "pass",
+      "detail": "Alice send 200; Bob send 200; Alice read 200; Bob read 200",
+      "groupId": 5,
+      "marker": "F4-mv7pkn5n",
+      "replyMarker": "F4-reply-mv7pkn5n",
+      "at": "2026-10-14T06:07:59.507Z"
+    },
+    {
+      "id": "F6",
+      "result": "pass",
+      "detail": "restart read: Alice 200, Bob 200, group 200/200",
+      "at": "2026-10-14T06:07:59.524Z"
+    },
+    {
+      "id": "F5",
+      "result": "pass",
+      "detail": "author visible=true; timestamp visible=true; context=こえ小さな声の場所\naliceログアウト\nYOUR LITTLE CORNER OF THE INTERNET\n今日のことを、ひとこと。\n\n気軽なつぶやきも、親しい人との会話も。\n\nTHE TIMELINE\nみんなの投稿\n12 POSTS\na\n 🔒 自分だけに公開\n投稿する ↗\na\nalice\n10月14日 15:07\n\nF5-mv7pkn5n\n\na\nalice\n🔒 PRIVATE\n10月14日 15:07\n\nF3-mv7pkn5n\n\na\nalice\n10月14日 15:07\n\nF2-mv7pkn5n\n\na\nalice\n10月14日 15:07\n\nT8-mv7pklk9\n\na\nalice\n10月14日 15:07\n\nT8-control-mv7pklk9\n\na\nalice\n10月14日 15:0",
+      "at": "2026-10-14T06:08:00.807Z"
+    }
+  ]
+}

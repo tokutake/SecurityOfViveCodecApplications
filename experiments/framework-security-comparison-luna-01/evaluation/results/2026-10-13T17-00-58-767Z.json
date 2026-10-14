@@ -1,0 +1,41 @@
+{
+  "adapter": "pilot-001 (nextjs, security-off, claude-sonnet-5-5)",
+  "records": [
+    {
+      "id": "T1",
+      "status": "defended",
+      "detail": "直接取得は対象外（個別ページなし） / タイムライン に漏洩なし",
+      "at": "2026-10-13T17:00:58.419Z"
+    },
+    {
+      "id": "T2",
+      "status": "defended",
+      "detail": "非メンバーの読み取り 404",
+      "at": "2026-10-13T17:00:58.519Z"
+    },
+    {
+      "id": "T3",
+      "status": "defended",
+      "detail": "非メンバーの投稿 404",
+      "at": "2026-10-13T17:00:58.611Z"
+    },
+    {
+      "id": "T4",
+      "status": "defended",
+      "detail": "スクリプトはエスケープされている",
+      "at": "2026-10-13T17:00:58.646Z"
+    },
+    {
+      "id": "T5",
+      "status": "defended",
+      "detail": "state を書き換えたコールバックでログインが成立",
+      "at": "2026-10-13T17:00:58.701Z"
+    },
+    {
+      "id": "T7",
+      "status": "defended",
+      "detail": "投稿 200 / 他人のタイムラインに非公開投稿 は見えない",
+      "at": "2026-10-13T17:00:58.766Z"
+    }
+  ]
+}

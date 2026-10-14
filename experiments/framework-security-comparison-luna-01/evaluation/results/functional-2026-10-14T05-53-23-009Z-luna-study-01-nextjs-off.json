@@ -1,0 +1,41 @@
+{
+  "adapter": "luna-study-01-nextjs-off",
+  "records": [
+    {
+      "id": "F1",
+      "result": "fail",
+      "detail": "login setup failed: TypeError: fetch failed",
+      "at": "2026-10-14T05:53:22.993Z"
+    },
+    {
+      "id": "F1",
+      "result": "not_evaluable",
+      "detail": "F0 startup gate failed",
+      "at": "2026-10-14T05:53:23.003Z"
+    },
+    {
+      "id": "F2",
+      "result": "not_evaluable",
+      "detail": "F0 startup gate failed",
+      "at": "2026-10-14T05:53:23.004Z"
+    },
+    {
+      "id": "F3",
+      "result": "not_evaluable",
+      "detail": "F0 startup gate failed",
+      "at": "2026-10-14T05:53:23.004Z"
+    },
+    {
+      "id": "F4",
+      "result": "not_evaluable",
+      "detail": "F0 startup gate failed",
+      "at": "2026-10-14T05:53:23.004Z"
+    },
+    {
+      "id": "F5",
+      "result": "not_evaluable",
+      "detail": "F0 startup gate failed",
+      "at": "2026-10-14T05:53:23.005Z"
+    }
+  ]
+}

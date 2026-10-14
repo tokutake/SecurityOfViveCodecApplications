@@ -1,0 +1,41 @@
+{
+  "adapter": "luna-study-01-nextjs-off",
+  "records": [
+    {
+      "id": "F0",
+      "result": "pass",
+      "detail": "home HTTP 200",
+      "at": "2026-10-14T05:54:46.033Z"
+    },
+    {
+      "id": "F1",
+      "result": "pass",
+      "detail": "logout HTTP 200; post-logout identity response HTTP 200",
+      "at": "2026-10-14T05:54:46.063Z"
+    },
+    {
+      "id": "F2",
+      "result": "pass",
+      "detail": "create 201; alice timeline 200; bob timeline 200",
+      "at": "2026-10-14T05:54:46.078Z"
+    },
+    {
+      "id": "F3",
+      "result": "pass",
+      "detail": "create 201; owner timeline 200",
+      "at": "2026-10-14T05:54:46.088Z"
+    },
+    {
+      "id": "F4",
+      "result": "pass",
+      "detail": "Alice send 201; Bob send 201; Alice read 200; Bob read 200",
+      "at": "2026-10-14T05:54:46.117Z"
+    },
+    {
+      "id": "F5",
+      "result": "pass",
+      "detail": "author visible=true; timestamp visible=true; context=mado 小さなSNS\nalice\nログアウト\nTHE COMMON ROOM\nタイムライン\n18 POSTS\na\n自分だけに公開\n投稿する ↗\na\nalice\n2026/10/14 14:54\n\nF5-mv7p3n0e\n\na\nalice\nPRIVATE\n2026/10/14 14:54\n\nF3-mv7p3n0e\n\na\nalice\n2026/10/14 14:54\n\nF2-mv7p3n0e\n\na\nalice\n2026/10/14 14:53\n\nT8-mv7p2dl1\n\na\nalice\n2026/10/14 14:53\n\nT8-control-mv7p2dl1\n\na\nalic",
+      "at": "2026-10-14T05:54:47.479Z"
+    }
+  ]
+}

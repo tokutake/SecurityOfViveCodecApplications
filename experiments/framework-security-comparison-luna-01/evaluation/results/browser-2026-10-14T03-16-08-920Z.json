@@ -1,0 +1,17 @@
+{
+  "adapter": "s4-nextjs-off (nextjs, security-off, claude-sonnet-4-6)",
+  "records": [
+    {
+      "id": "B4",
+      "status": "defended",
+      "detail": "スクリプトは実行されなかった",
+      "at": "2026-10-14T03:16:08.814Z"
+    },
+    {
+      "id": "B8",
+      "status": "inconclusive",
+      "detail": "adapter.json に attackPost の設定がない（Next.js の Server Actions は対象外）",
+      "at": "2026-10-14T03:16:08.821Z"
+    }
+  ]
+}

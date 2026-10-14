@@ -1,0 +1,3 @@
+import { createFileRoute } from '@tanstack/react-router'
+import { callback,cookieHeader } from '../server'
+export const Route=createFileRoute('/auth/callback')({server:{handlers:{GET:async({request})=>{try{const sid=await callback(request);const headers=new Headers({location:'/', 'cache-control':'no-store'});headers.append('set-cookie',cookieHeader('sid',sid,604800,process.env.APP_URL?.startsWith('https://')||false));headers.append('set-cookie',cookieHeader('oidc_tx','',0,process.env.APP_URL?.startsWith('https://')||false));return new Response(null,{status:302,headers})}catch{return new Response('ログインに失敗しました。OIDC設定とコールバックURLを確認して再試行してください。',{status:400})}}}}})

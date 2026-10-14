@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= title %> — micro-sns</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #f3f4f6;
+      --surface: #ffffff;
+      --border: #e5e7eb;
+      --text: #111827;
+      --muted: #6b7280;
+      --primary: #6366f1;
+      --primary-hover: #4f46e5;
+      --private-bg: #fffbeb;
+      --private-border: #f59e0b;
+      --radius: 8px;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+
+    a { color: var(--primary); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    nav {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .nav-inner {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 0 1rem;
+      display: flex;
+      align-items: center;
+      height: 52px;
+      gap: 1.5rem;
+    }
+    .nav-brand {
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: var(--primary);
+      text-decoration: none;
+    }
+    .nav-links { display: flex; gap: 1rem; flex: 1; }
+    .nav-link {
+      font-size: 0.9rem;
+      color: var(--muted);
+      text-decoration: none;
+      padding: 0.25rem 0.5rem;
+      border-radius: 4px;
+      transition: background 0.15s;
+    }
+    .nav-link:hover { background: var(--bg); color: var(--text); text-decoration: none; }
+    .nav-link.active { color: var(--primary); font-weight: 600; }
+    .nav-user {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-size: 0.875rem;
+      color: var(--muted);
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.375rem 0.875rem;
+      font-size: 0.875rem;
+      font-weight: 500;
+      border-radius: var(--radius);
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.15s;
+    }
+    .btn-primary { background: var(--primary); color: #fff; }
+    .btn-primary:hover { background: var(--primary-hover); text-decoration: none; color: #fff; }
+    .btn-outline {
+      background: transparent;
+      border: 1px solid var(--border);
+      color: var(--text);
+    }
+    .btn-outline:hover { background: var(--bg); text-decoration: none; }
+    .btn-sm { padding: 0.25rem 0.625rem; font-size: 0.8rem; }
+
+    main {
+      max-width: 720px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1rem 1.25rem;
+    }
+    .card + .card { margin-top: 0.75rem; }
+
+    .post-header {
+      display: flex;
+      align-items: baseline;
+      gap: 0.5rem;
+      margin-bottom: 0.4rem;
+    }
+    .post-author { font-weight: 600; font-size: 0.9rem; }
+    .post-time { font-size: 0.78rem; color: var(--muted); }
+    .post-content { font-size: 0.95rem; white-space: pre-wrap; word-break: break-word; }
+
+    .badge {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: 600;
+      padding: 0.1rem 0.4rem;
+      border-radius: 4px;
+      vertical-align: middle;
+    }
+    .badge-private {
+      background: var(--private-bg);
+      color: #92400e;
+      border: 1px solid var(--private-border);
+    }
+
+    .private-card {
+      border-color: var(--private-border);
+      background: var(--private-bg);
+    }
+
+    .alert {
+      padding: 0.75rem 1rem;
+      border-radius: var(--radius);
+      margin-bottom: 1rem;
+      font-size: 0.875rem;
+    }
+    .alert-error { background: #fee2e2; color: #991b1b; border: 1px solid #fca5a5; }
+
+    textarea {
+      width: 100%;
+      padding: 0.625rem 0.75rem;
+      font-size: 0.9rem;
+      font-family: inherit;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      resize: vertical;
+      min-height: 80px;
+      line-height: 1.5;
+      transition: border-color 0.15s;
+    }
+    textarea:focus { outline: none; border-color: var(--primary); }
+
+    input[type="text"], input[type="search"], select {
+      width: 100%;
+      padding: 0.5rem 0.75rem;
+      font-size: 0.875rem;
+      font-family: inherit;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      line-height: 1.5;
+      transition: border-color 0.15s;
+    }
+    input:focus, select:focus { outline: none; border-color: var(--primary); }
+
+    .form-row {
+      display: flex;
+      gap: 0.5rem;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .form-row > * { flex: 1 1 auto; }
+    .form-row > .btn { flex: 0 0 auto; }
+
+    .label {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.375rem;
+      font-size: 0.875rem;
+      color: var(--muted);
+      cursor: pointer;
+      user-select: none;
+    }
+    label input[type="checkbox"] { cursor: pointer; }
+
+    .section-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+    .section-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 1rem;
+    }
+
+    .member-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-bottom: 0.75rem;
+    }
+    .member-chip {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 100px;
+      padding: 0.2rem 0.7rem;
+      font-size: 0.8rem;
+      color: var(--text);
+    }
+
+    .messages { display: flex; flex-direction: column; gap: 0.5rem; margin-bottom: 1rem; }
+    .message-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 0.75rem 1rem; }
+    .message-header { display: flex; align-items: baseline; gap: 0.5rem; margin-bottom: 0.25rem; }
+    .message-author { font-weight: 600; font-size: 0.875rem; }
+    .message-time { font-size: 0.75rem; color: var(--muted); }
+    .message-content { font-size: 0.9rem; white-space: pre-wrap; word-break: break-word; }
+    .message-card.own { border-color: #c7d2fe; background: #eef2ff; }
+
+    .empty-state {
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.9rem;
+      padding: 2rem 0;
+    }
+
+    .group-list { display: flex; flex-direction: column; gap: 0.75rem; }
+    .group-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1rem 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      text-decoration: none;
+      color: var(--text);
+      transition: border-color 0.15s, box-shadow 0.15s;
+    }
+    .group-card:hover { border-color: var(--primary); box-shadow: 0 0 0 2px #e0e7ff; text-decoration: none; }
+    .group-name { font-weight: 600; }
+    .group-meta { font-size: 0.8rem; color: var(--muted); margin-top: 0.1rem; }
+    .group-arrow { color: var(--muted); font-size: 1.2rem; }
+
+    .divider { border: none; border-top: 1px solid var(--border); margin: 1.25rem 0; }
+  </style>
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    <a class="nav-brand" href="/">micro-sns</a>
+    <div class="nav-links">
+      <a class="nav-link <%= activeNav === 'timeline' ? 'active' : '' %>" href="/">タイムライン</a>
+      <% if (user) { %>
+      <a class="nav-link <%= activeNav === 'dm' ? 'active' : '' %>" href="/dm">DM</a>
+      <% } %>
+    </div>
+    <div class="nav-user">
+      <% if (user) { %>
+        <span><%= user.display_name %></span>
+        <form method="POST" action="/logout" style="display:inline">
+          <button type="submit" class="btn btn-outline btn-sm">ログアウト</button>
+        </form>
+      <% } else { %>
+        <a href="/login" class="btn btn-primary btn-sm">ログイン</a>
+      <% } %>
+    </div>
+  </div>
+</nav>
+<main>

@@ -1,0 +1,41 @@
+{
+  "adapter": "luna-study-01-nextjs-off",
+  "records": [
+    {
+      "id": "F1",
+      "result": "fail",
+      "detail": "login setup failed: Error: login start HTTP 500; ",
+      "at": "2026-10-14T06:00:58.190Z"
+    },
+    {
+      "id": "F0",
+      "result": "pass",
+      "detail": "home HTTP 200",
+      "at": "2026-10-14T06:00:58.209Z"
+    },
+    {
+      "id": "F2",
+      "result": "not_evaluable",
+      "detail": "login setup failed: Error: login start HTTP 500; ",
+      "at": "2026-10-14T06:00:58.211Z"
+    },
+    {
+      "id": "F3",
+      "result": "not_evaluable",
+      "detail": "login setup failed: Error: login start HTTP 500; ",
+      "at": "2026-10-14T06:00:58.212Z"
+    },
+    {
+      "id": "F4",
+      "result": "not_evaluable",
+      "detail": "login setup failed: Error: login start HTTP 500; ",
+      "at": "2026-10-14T06:00:58.212Z"
+    },
+    {
+      "id": "F5",
+      "result": "not_evaluable",
+      "detail": "login setup failed: Error: login start HTTP 500; ",
+      "at": "2026-10-14T06:00:58.212Z"
+    }
+  ]
+}

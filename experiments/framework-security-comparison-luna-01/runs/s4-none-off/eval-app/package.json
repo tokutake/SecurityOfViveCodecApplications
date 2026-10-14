@@ -1,0 +1,17 @@
+{
+  "name": "micro-sns",
+  "version": "1.0.0",
+  "description": "Experimental micro SNS with OIDC authentication",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "dev": "node --watch src/app.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "ejs": "^3.1.10",
+    "express": "^4.19.2",
+    "express-session": "^1.18.0",
+    "openid-client": "^5.7.0"
+  }
+}

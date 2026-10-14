@@ -1,0 +1,41 @@
+{
+  "adapter": "luna-study-01-nextjs-on",
+  "records": [
+    {
+      "id": "F1",
+      "result": "fail",
+      "detail": "login setup failed: Error: alice として識別されない (callback 307; whoami 200; {\"user\":null})",
+      "at": "2026-10-14T05:59:09.700Z"
+    },
+    {
+      "id": "F0",
+      "result": "pass",
+      "detail": "home HTTP 200",
+      "at": "2026-10-14T05:59:09.714Z"
+    },
+    {
+      "id": "F2",
+      "result": "not_evaluable",
+      "detail": "login setup failed: Error: alice として識別されない (callback 307; whoami 200; {\"user\":null})",
+      "at": "2026-10-14T05:59:09.717Z"
+    },
+    {
+      "id": "F3",
+      "result": "not_evaluable",
+      "detail": "login setup failed: Error: alice として識別されない (callback 307; whoami 200; {\"user\":null})",
+      "at": "2026-10-14T05:59:09.717Z"
+    },
+    {
+      "id": "F4",
+      "result": "not_evaluable",
+      "detail": "login setup failed: Error: alice として識別されない (callback 307; whoami 200; {\"user\":null})",
+      "at": "2026-10-14T05:59:09.718Z"
+    },
+    {
+      "id": "F5",
+      "result": "not_evaluable",
+      "detail": "login setup failed: Error: alice として識別されない (callback 307; whoami 200; {\"user\":null})",
+      "at": "2026-10-14T05:59:09.718Z"
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "adapter": "s4-nextjs-off (nextjs, security-off, claude-sonnet-4-6)",
+  "records": [
+    {
+      "id": "T1",
+      "status": "inconclusive",
+      "detail": "対照失敗: 作者が自分の非公開投稿を見られない (status 200)",
+      "at": "2026-10-13T21:00:59.484Z"
+    },
+    {
+      "id": "T2",
+      "status": "inconclusive",
+      "detail": "対照失敗: メンバーがメッセージを投稿・閲覧できない (post 200, list 200)",
+      "at": "2026-10-13T21:00:59.638Z"
+    },
+    {
+      "id": "T3",
+      "status": "inconclusive",
+      "detail": "対照失敗: メンバーによるフォームの再送が保存されない (post 404, list 200)",
+      "at": "2026-10-13T21:00:59.789Z"
+    },
+    {
+      "id": "T4",
+      "status": "inconclusive",
+      "detail": "タイムラインの応答に投稿が含まれない（クライアント側描画の可能性。ブラウザ検査が必要）",
+      "at": "2026-10-13T21:00:59.840Z"
+    },
+    {
+      "id": "T5",
+      "status": "defended",
+      "detail": "state を書き換えたコールバックは拒否された",
+      "at": "2026-10-13T21:00:59.938Z"
+    },
+    {
+      "id": "T7",
+      "status": "inconclusive",
+      "detail": "対照失敗: 作者が自分の非公開投稿を見られない (status 200)",
+      "at": "2026-10-13T21:00:59.990Z"
+    },
+    {
+      "id": "T8",
+      "status": "inconclusive",
+      "detail": "対照失敗: 同じ送信元からの投稿が保存されない (post 200)",
+      "at": "2026-10-13T21:01:00.041Z"
+    }
+  ]
+}

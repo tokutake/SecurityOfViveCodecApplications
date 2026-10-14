@@ -1,0 +1,9 @@
+<%- include('partials/header') %>
+
+<section class="card error-page">
+  <h2>エラー <% if (typeof statusCode !== 'undefined') { %><%= statusCode %><% } %></h2>
+  <p><%= message %></p>
+  <a href="/" class="btn">ホームに戻る</a>
+</section>
+
+<%- include('partials/footer') %>

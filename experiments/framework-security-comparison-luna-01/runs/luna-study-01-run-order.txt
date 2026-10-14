@@ -1,0 +1,9 @@
+model=gpt-6-luna
+prefix=luna-study-01
+randomized order, fixed before first run:
+none-on
+tanstack-on
+none-off
+nextjs-off
+nextjs-on
+tanstack-off

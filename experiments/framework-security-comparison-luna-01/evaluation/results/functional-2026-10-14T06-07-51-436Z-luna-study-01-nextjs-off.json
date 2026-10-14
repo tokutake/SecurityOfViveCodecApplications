@@ -1,0 +1,52 @@
+{
+  "adapter": "luna-study-01-nextjs-off",
+  "records": [
+    {
+      "id": "F0",
+      "result": "pass",
+      "detail": "home HTTP 200",
+      "at": "2026-10-14T06:07:50.014Z"
+    },
+    {
+      "id": "F1",
+      "result": "pass",
+      "detail": "logout HTTP 200; post-logout identity response HTTP 200",
+      "at": "2026-10-14T06:07:50.055Z"
+    },
+    {
+      "id": "F2",
+      "result": "pass",
+      "detail": "create 201; alice timeline 200; bob timeline 200",
+      "marker": "F2-mv7pkfv6",
+      "at": "2026-10-14T06:07:50.073Z"
+    },
+    {
+      "id": "F3",
+      "result": "pass",
+      "detail": "create 201; owner timeline 200",
+      "marker": "F3-mv7pkfv6",
+      "at": "2026-10-14T06:07:50.083Z"
+    },
+    {
+      "id": "F4",
+      "result": "pass",
+      "detail": "Alice send 201; Bob send 201; Alice read 200; Bob read 200",
+      "groupId": 5,
+      "marker": "F4-mv7pkfv6",
+      "replyMarker": "F4-reply-mv7pkfv6",
+      "at": "2026-10-14T06:07:50.118Z"
+    },
+    {
+      "id": "F6",
+      "result": "pass",
+      "detail": "restart read: Alice 200, Bob 200, group 200/200",
+      "at": "2026-10-14T06:07:50.137Z"
+    },
+    {
+      "id": "F5",
+      "result": "pass",
+      "detail": "author visible=true; timestamp visible=true; context=mado 小さなSNS\nalice\nログアウト\nTHE COMMON ROOM\nタイムライン\n12 POSTS\na\n自分だけに公開\n投稿する ↗\na\nalice\n2026/10/14 15:07\n\nF5-mv7pkfv6\n\na\nalice\nPRIVATE\n2026/10/14 15:07\n\nF3-mv7pkfv6\n\na\nalice\n2026/10/14 15:07\n\nF2-mv7pkfv6\n\na\nalice\n2026/10/14 15:07\n\nT8-mv7pked6\n\na\nalice\n2026/10/14 15:07\n\nT8-control-mv7pked6\n\na\nalic",
+      "at": "2026-10-14T06:07:51.406Z"
+    }
+  ]
+}
